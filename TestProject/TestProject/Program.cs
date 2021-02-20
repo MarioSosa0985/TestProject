@@ -8,33 +8,41 @@ namespace TestProject
     {
         static void Main(string[] args)
         {
-            MyMethod();
-        }
+            Users myUser = new Users();
+            myUser.Password = "Password";
+            myUser.UserName = "Mario";
+            myUser.UserId = 1;
 
-        public static void MyMethod()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Module 1 Assignment");
-
-            int myVariable1 = 1;
-            int myVariable2 = 3;
-            int myVariable3 = 7;
-
-
-            Console.WriteLine(myVariable1);
-            Console.WriteLine(myVariable2);
-
-            string myVariablestring = ("This is my second attempt");
-            string myVariablestring2 = ("I am hoping it is correct this time");
-            Console.WriteLine(myVariable1 * myVariable2);
-
-            Console.WriteLine(myVariablestring);
-
-
-            Console.WriteLine(myVariable1 / myVariable2);
-            Console.WriteLine(myVariablestring2);
-
-            Console.WriteLine(myVariable1 + myVariable3);
+            Console.WriteLine(myUser.Password);
+            Console.WriteLine(myUser.UserName);
+            Console.WriteLine(myUser.UserId);
         }
     }
+}
+
+public class Users
+{
+    public int UserId { get; set; }
+    public string UserName { get; set; }
+    public string Password { get; set; }
+}
+
+public class Roles
+{
+    public string RoleName { get; set; }
+}
+
+public class Images
+{
+    public string ImagePath { get; set; }
+}
+
+public class Posts
+{
+    public string TheActualPost { get; set; }
+}
+
+public class Comments
+{
+    public string TheComment { get; set; }
 }
